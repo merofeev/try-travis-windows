@@ -5,10 +5,10 @@ script:
   - echo hi
   #- net stop docker
   - docker version
-  - ls /mingw64/
-  - cat /mingw64/c/ProgramData/docker/config/daemon.json
+  - ls /c/
+  - cat /c/ProgramData/docker/config/daemon.json
   # "experimental": true
-  - "\"/mingw64/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
+  - "\"/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
   - docker version
   - docker run --platform linux alpine sleep 10
  
