@@ -5,6 +5,8 @@ script:
   - echo hi
   #- net stop docker
   - docker version
+  - cat /ProgramData/docker/config/daemon.json
+  # "experimental": true
   - "/Program Files/Docker/Docker/DockerCli.exe" -SwitchDaemon"
   - docker version
   - docker run --platform linux alpine sleep 10
