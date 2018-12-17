@@ -1,5 +1,6 @@
 os: windows
-language: python
+language: bash
+services: docker
 script: 
   - echo hi
   - docker run alpine sleep 10
