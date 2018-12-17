@@ -4,9 +4,9 @@ services: docker
 script: 
   - echo hi
   - net stop docker
-  - dockerd --experimental &
+  - dockerd --experimental  2>&1 >log.txt &
   - docker version
-  - wget https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
+  - wget -q https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
   #Remove-Item "$env:ProgramFiles\Linux Containers" -Force -Recurse
   - unzip release.zip -d "/c/Program Files/Linux Containers/"
   #- ls "/c/Program Files/"
@@ -17,5 +17,7 @@ script:
   - "\"/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
   - docker version
   - docker run --platform linux alpine sleep 10
+  - kill $(jobs -p)
+  - cat log.txt
 
  
