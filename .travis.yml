@@ -4,7 +4,7 @@ services: docker
 script: 
   - echo hi
   - net stop docker
-  - dockerd --experimental
+  - dockerd --experimental -D
   - docker version
   #- ls "/c/Program Files/"
   #- ls "/c/Program Files/Docker"
