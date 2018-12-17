@@ -2,21 +2,21 @@ os: windows
 language: bash
 services: docker
 script: 
-  - echo hi
+  #- echo hi
   - net stop docker
   - dockerd --experimental  2>&1 >log.txt &
-  - docker version
+  #- docker version
   - wget -q https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
   #Remove-Item "$env:ProgramFiles\Linux Containers" -Force -Recurse
   - unzip release.zip -d "/c/Program Files/Linux Containers/"
   #- ls "/c/Program Files/"
   #- ls "/c/Program Files/Docker"
-  - ls /c/ProgramData/docker/config
-  - cat /c/ProgramData/docker/config/daemon.json
+  #- ls /c/ProgramData/docker/config
+  #- cat /c/ProgramData/docker/config/daemon.json
   # "experimental": true
-  - "\"/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
-  - docker version
-  - docker run --platform linux alpine sleep 10
+  #- "\"/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
+  #- docker version
+  - docker run --platform linux alpine  echo Hello!
   - kill $(jobs -p)
   - cat log.txt
 
