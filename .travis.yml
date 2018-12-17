@@ -3,5 +3,6 @@ language: bash
 services: docker
 script: 
   - echo hi
-  - docker run alpine sleep 10
+  - docker version
+  - docker run --isolation hyperv alpine sleep 10
  
