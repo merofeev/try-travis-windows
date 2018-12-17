@@ -6,6 +6,7 @@ script:
   - net stop docker
   - dockerd --experimental &
   - docker version
+  - Powershell -File ps.ps1
   #- ls "/c/Program Files/"
   #- ls "/c/Program Files/Docker"
   - ls /c/ProgramData/docker/config
@@ -14,4 +15,5 @@ script:
   - "\"/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
   - docker version
   - docker run --platform linux alpine sleep 10
+
  
