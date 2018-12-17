@@ -3,7 +3,8 @@ language: bash
 services: docker
 script: 
   - echo hi
-  #- net stop docker
+  - net stop docker
+  - dockerd --experimental
   - docker version
   #- ls "/c/Program Files/"
   #- ls "/c/Program Files/Docker"
