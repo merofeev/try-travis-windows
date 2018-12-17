@@ -6,7 +6,7 @@ script:
   - net stop docker
   - dockerd --experimental &
   - docker version
-  - Powershell -File ps.ps1
+  - powershell -executionpolicy bypass -File .\ps.ps1
   #- ls "/c/Program Files/"
   #- ls "/c/Program Files/Docker"
   - ls /c/ProgramData/docker/config
