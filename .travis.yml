@@ -4,6 +4,6 @@ services: docker
 script: 
   - echo hi
   - docker version
-  - "\"C:\\Program Files\\Docker\\Docker\\DockerCli.exe\" -SwitchDaemon"
-  - docker run --isolation hyperv alpine sleep 10
+  #- "\"C:\\Program Files\\Docker\\Docker\\DockerCli.exe\" -SwitchDaemon"
+  - docker run --platform linux alpine sleep 10
  
