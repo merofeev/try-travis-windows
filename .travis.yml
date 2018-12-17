@@ -5,7 +5,9 @@ script:
   - echo hi
   #- net stop docker
   - docker version
-  - ls /c/
+  - ls "/c/Program Files/"
+  - ls "/c/Program Files/Docker"
+  - ls /c/ProgramData/
   - cat /c/ProgramData/docker/config/daemon.json
   # "experimental": true
   - "\"/c/Program Files/Docker/Docker/DockerCli.exe\" -SwitchDaemon"
