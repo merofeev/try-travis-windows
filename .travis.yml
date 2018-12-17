@@ -5,7 +5,7 @@ script:
   - echo hi
   #- net stop docker
   - docker version
-  - "\"C:\\Program Files\\Docker\\Docker\\DockerCli.exe\" -SwitchDaemon"
+  - "/Program Files/Docker/Docker/DockerCli.exe" -SwitchDaemon"
   - docker version
   - docker run --platform linux alpine sleep 10
  
