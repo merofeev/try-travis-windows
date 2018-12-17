@@ -3,7 +3,7 @@ language: bash
 services: docker
 script: 
   - echo hi
-  - net stop dockerd
+  - net stop docker
   - docker version
   #- "\"C:\\Program Files\\Docker\\Docker\\DockerCli.exe\" -SwitchDaemon"
   - docker run --platform linux alpine sleep 10
