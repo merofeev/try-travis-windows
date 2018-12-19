@@ -19,6 +19,6 @@ script:
   #- docker version
   - echo hello > hello.txt
   - echo docker  -v "$(pwd):$(pwd)" -w "$(pwd)" run abrarov/mingw cat hello.txt
-  - docker  -v "$(pwd):$(pwd)" -w "$(pwd)" run abrarov/mingw cat hello.txt
+  - docker run -v "$(pwd):$(pwd)" -w "$(pwd)" abrarov/mingw cat hello.txt
 
  
